@@ -5,4 +5,5 @@ class Item {
 	char danok;
 
 
+
 }
