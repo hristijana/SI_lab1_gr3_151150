@@ -1,3 +1,5 @@
+import java.util.List;
+
 class Item {
 	int id;
 	String name;
@@ -57,4 +59,25 @@ double getTaxReturn () {
 		float povrat = ddv / 100 * 15;
 		return povrat;
 	}
+}
+
+class Receipt {
+	Item[] lista;
+
+	float vkupenIznos() {
+		float zbir = 0
+		for (int i = 0; i < lista.length; i++) {
+			zbir += lista.getPrice();
+		}
+		return zbir;
+	}
+	
+	float povratDanok() {
+		float povratDDV = 0
+		for (int i = 0; i < lista.length; i++) {
+			povratDDV += lista.getTaxReturn();
+		}
+		return povratDDV;
+	}
+
 }
